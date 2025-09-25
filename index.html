@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        .container {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWWZYUXIkuLRhLv0MrNk1t-ak3U95y3yOGRQ&s');
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(10,0.5,10,10,0.100);
+            width: 1050px;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .menu, .customer-info {
+            background: beige;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+        #output {
+          background-color: lightblue;
+          margin-top: 20px;
+          padding: 15px;
+          border-radius: 10px;
+        }
+        input[type="text"] {
+          width: 100px;  
+          height: 5px;   
+          font-size: 16px;
+          padding: 6px;
+          border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h2>Menu</h2>
+            <label>Ramen</label>
+            <input type="checkbox" id="menu1" value=200.00><br>
+            <label>California Maki</label>
+            <input type="checkbox" id="menu2" value=250.00><br>
+            <label>Takoyaki</label>
+            <input type="checkbox" id="menu3" value=150.00><br>
+            <label>Tteokboki</label>
+            <input type="checkbox" id="menu4" value=200.00><br>
+            <label>Chicken Buffalo</label>
+            <input type="checkbox" id="menu5" value=300.00><br>
+        </div>
+
+        <div class="customer-info">
+            <h2>Customer's Contact Info</h2>
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Enter full name"><br>
+            <label>Address:</label>
+            <input type="text" id="address" placeholder="Enter Address"><br>
+            <label>Phone Number:</label>
+            <input type="text" id="number" placeholder="Enter number"><br><br>
+            <input type="button" value="Order Now" py-click="ordering_form"><br>
+        </div>
+    </div>
+
+    <div id="output" style="white-space: pre-wrap;"></div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
